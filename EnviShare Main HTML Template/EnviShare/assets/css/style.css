@@ -3151,11 +3151,12 @@ div#scrollbar::-webkit-scrollbar-thumb {
         .header-section .header-area .logo a {
           display: block; }
           .header-section .header-area .logo a img {
-            max-width: 100%; } }
+            max-width: 65%; } }
     @media (min-width: 1200px) {
       .header-section .header-area .main-menu {
         min-width: 850px; } }
     .header-section .header-area .main-menu ul.menu {
+      width: 70%;
       justify-content: space-between;
       align-items: center; }
       .header-section .header-area .main-menu ul.menu li {
