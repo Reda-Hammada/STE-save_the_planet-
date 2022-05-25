@@ -6,12 +6,12 @@ require './config/configDB.php';
 class findMonday {
 
    // method to fetch data from the database to display
-    public function find(){
+    public function fetchTasks(){
         
         $configDB = new dataBase();
         $database = $configDB->connectDB();
-        $monday = 'SELECT * FROM days';
-        $result = mysqli_query($database,$monday);
+        $taks = 'SELECT * FROM days';
+        $result = mysqli_query($database,$task);
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         // $mondayData = array();
