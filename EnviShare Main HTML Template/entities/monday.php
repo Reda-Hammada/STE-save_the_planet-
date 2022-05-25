@@ -30,7 +30,7 @@ class Monday {
     }
 
 
-    public function setTask3($task1){
+    public function setTask3($task3){
 
         $this->taks3 = $task3;
 
