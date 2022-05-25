@@ -10,7 +10,7 @@
 
     if($connect == null):
 
-        $connect = mysqli_connect('localhost','problemSolvers','123456', 'habits');
+        $connect = mysqli_connect('localhost','Reda','123456', 'habits');
 
     else:
 

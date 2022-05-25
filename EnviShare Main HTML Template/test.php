@@ -1,6 +1,6 @@
 <?php
  
- require './manager/findMonday.php';
+ include './Manager/findMonday.php';
 
  $monday = new findMonday();
 

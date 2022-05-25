@@ -1,7 +1,7 @@
 <?php
 
 require './entities/monday.php';
-include './config/configDB.php';
+require './config/configDB.php';
 
 class findMonday {
 
@@ -10,7 +10,7 @@ class findMonday {
         
         $configDB = new dataBase();
         $database = $configDB->connectDB();
-        $monday = 'SELECT * FROM monday';
+        $monday = 'SELECT * FROM days';
         $result = mysqli_query($database,$monday);
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
