@@ -4,7 +4,7 @@
 
     private $connect = null;
 
-    public function connectDB(){
+    public function connectDataBase(){
 
         if(is_null($this->connect)){
      
@@ -16,7 +16,7 @@
 
             if(!$this->connect){
 
-                $message = "database connection eroor : " . mysqli_connect_erro();
+                $message = "database connection error : " . mysqli_connect_erro();
 
                 throw new exception($message);
              }
