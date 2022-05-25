@@ -1,26 +1,27 @@
 <?php 
  
- class connectDB {
+ class dataBase {
 
-    private $connect = null;
 
-    public function connectDataBase(){
+  public function connectDB() {
 
-        if(is_null($this->connect)){
-     
-          $this->connect = mysqli_connect('localhost','problemSolvers','123456','habits');
 
-        }
+    $connect = null ;
 
-        else{
+    if($connect == null):
 
-            if(!$this->connect){
+        $connect = mysqli_connect('localhost','problemSolvers','123456', 'habits');
 
-                $message = "database connection error : " . mysqli_connect_erro();
+    else:
 
-                throw new exception($message);
-             }
+        $message = "database error";
 
-        }
-    }
+        throw new exception($message);
+
+    
+    endif;
+
+    return $connect;
+}
+
  }

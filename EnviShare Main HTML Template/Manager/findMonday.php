@@ -1,26 +1,33 @@
 <?php
 
 require './entities/monday.php';
-require './config/configDB.php';
+include './config/configDB.php';
 
 class findMonday {
 
+   // method to fetch data from the database to display
     public function find(){
-       
+        
+        $configDB = new dataBase();
+        $database = $configDB->connectDB();
         $monday = 'SELECT * FROM monday';
-        $configDB = new connectDB();
-        $db = $configDB->connectDataBase();
-        $result = mysqli_query($db,$monday);
+        $result = mysqli_query($database,$monday);
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-        $mondayData = array();
+        // $mondayData = array();
 
-        foreach($data as $task){
+        return print_r($data);
 
-            
+        // foreach($data as $task){
+
+        //     $mondayEntity = new Monday();
+        //     $mondayEntity->setTask1($task['task1']);
 
 
-        }
+
+
+
+        // }
 
     }
 }
