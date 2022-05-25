@@ -1,18 +1,21 @@
 <?php
- session_start();
+
 
 include '../Manager/userManager.php';
 
-if(isset($_GET['email'],$_GET['password'])){
+session_start();
 
-    $_SESSION['email'] = $_GET['email'];
-    $_SESSION['password'] = $_GET['password'];
-    print_r($_POST);
+if(isset($_POST['email'],$_POST['password'])){
+
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
     $registerUser = new user();
+    $user =$registerUser->login( $email, $pass);
 
-    $registerUser->login( $_SESSION['email'], $_SESSION['password']);
+
+
     
- 
+    
 }
 
 
@@ -215,7 +218,7 @@ margin-top: 5%;
       <p class="h4 mb-4signintext top"><strong>Sign in to this Website</strong></p>
 
 <!--Login with Social Media Buttons-->
-<form method="GET"> 
+<form method="post"> 
 
       <!-- Email -->
       <input name="email"  email="" type="email" class="form-control mb-4"  placeholder=" Email" style="font-family:Arial, FontAwesome">
