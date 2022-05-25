@@ -7,7 +7,6 @@ if(isset($_POST['fullname'],$_POST['email'],$_POST['password'])){
     $fullname = $_POST['fullname'];
     $email = $_POST['email'];
     $password = md5($_POST['password']);
-    print_r($_POST);
     $registerUser = new user();
 
     $registerUser->register($fullname,$email,$password);
