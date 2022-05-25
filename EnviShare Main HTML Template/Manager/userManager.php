@@ -5,6 +5,11 @@ include '../config/configDB.php';
 class user{
 
 
+    public function login(){
+
+
+    }
+
     public function register($fullname,$email,$password){
         
 
@@ -12,7 +17,7 @@ class user{
         $configDB = new dataBase();
         $db = $configDB->connectDB();
         $result = mysqli_query($db, $createUser);
-
+        header('location:login.php');
      
     }
 }
