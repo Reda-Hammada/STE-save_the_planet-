@@ -3644,9 +3644,9 @@ div#scrollbar::-webkit-scrollbar-thumb {
     animation: run_animation 40s linear infinite forwards; }
   .banner .banner-area .banner-content .banner-heading h2 {
     margin: 0;
-    font-weight: 300; }
+    font-weight: 100; }
     .banner .banner-area .banner-content .banner-heading h2 span {
-      font-weight: 700; }
+      font-weight: 500; }
     .banner .banner-area .banner-content .banner-heading h2:last-child {
       margin-bottom: 20px; }
     @media (min-width: 992px) {
