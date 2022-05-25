@@ -6,7 +6,7 @@ if(isset($_POST['fullname'],$_POST['email'],$_POST['password'])){
 
     $fullname = $_POST['fullname'];
     $email = $_POST['email'];
-    $password = md5($_POST['password']);
+    $password = $_POST['password'];
     $registerUser = new user();
 
     $registerUser->register($fullname,$email,$password);
@@ -237,7 +237,7 @@ margin-top: 5%;
   <div class="col-sm-4 signup text-center">
     <h2 class="HelloFriend">Hello, Friend!</h2>
     <h4 class="SignupText">Enter your personal details<br>and start journey with us</h4>
-    <button class="btn btn-info btn-block signupbtn" type="submit">SIGN in</button>
+    <a  href="login.php" class="btn btn-info btn-block signupbtn" type="submit">sign in</a>
 
   </div>
 </div>

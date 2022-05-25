@@ -1,33 +1,43 @@
 <?php
 
-require './entities/monday.php';
-require './config/configDB.php';
+require '../entities/day.php';
+require '../config/configDB.php';
 
-class findMonday {
+class day {
 
    // method to fetch data from the database to display
     public function fetchTasks(){
         
         $configDB = new dataBase();
         $database = $configDB->connectDB();
-        $taks = 'SELECT * FROM days';
-        $result = mysqli_query($database,$task);
+        $tasks = 'SELECT * FROM days';
+        $result = mysqli_query($database,$tasks);
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-        // $mondayData = array();
 
-        return print_r($data);
+    
+        // die(); // used this pre built function to debug the code
 
-        // foreach($data as $task){
-
-        //     $mondayEntity = new Monday();
-        //     $mondayEntity->setTask1($task['task1']);
+         $dayData = array();
 
 
+         foreach($data as $task){
+
+           $dayEntity = new newDay();
+           $dayEntity->setTask1($task['taks1']);
+           $dayEntity->setTask2($task['taks2']);
+           $dayEntity->setTask3($task['taks3']);
+           $dayEntity->setTask4($task['taks4']);
+           $dayEntity->setTask5($task['taks5']);
+           $dayEntity->setTask6($task['taks6']);
+         
+         
+
+           array_push($dayData, $dayEntity);
+        }
 
 
-
-        // }
+        return $dayData;
 
     }
 }

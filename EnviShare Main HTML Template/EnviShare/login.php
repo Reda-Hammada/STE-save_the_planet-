@@ -10,8 +10,9 @@ if(isset($_POST['email'],$_POST['password'])){
     $email = $_POST['email'];
     $pass = $_POST['password'];
     $registerUser = new user();
-    $user =$registerUser->login( $email, $pass);
-
+    $registerUser->login($email,$pass);
+    
+    
 
 
     
@@ -218,7 +219,7 @@ margin-top: 5%;
       <p class="h4 mb-4signintext top"><strong>Sign in to this Website</strong></p>
 
 <!--Login with Social Media Buttons-->
-<form method="post"> 
+<form method="post" > 
 
       <!-- Email -->
       <input name="email"  email="" type="email" class="form-control mb-4"  placeholder=" Email" style="font-family:Arial, FontAwesome">
@@ -238,8 +239,8 @@ margin-top: 5%;
 <!--Column for signin-->
   <div class="col-sm-4 signup text-center">
     <h2 class="HelloFriend">Hello, Friend!</h2>
-    <h4 class="SignupText">Enter your personal details<br>and start journey with us</h4>
-    <button class="btn btn-info btn-block signupbtn" type="submit">SIGN </button>
+    <h4 class="SignupText">you don't have an Account  yet?</h4>
+    <a href="register.php" class="btn btn-info btn-block signupbtn" type="submit">sign up</a>
 
   </div>
 </div>

@@ -1,23 +1,27 @@
 <?php
 
 
-
 include '../config/configDB.php';
 
 class user{
 
+    // check user credentials if true  and return them in an array
+
+
     public function login($email, $password){ 
 
-                    $getUser = "SELECT * FROM users WHERE email ='$email' AND pass ='$password' ";
-                    $configDB = new database();
-                    $db = $configDB->connectDB();
+                    $config = new dataBase();
+                    $db = $config->connectDB();
+                    $getUser = "SELECT * FROM users WHERE email = '$email' AND pass = '$password'";
                     $query = mysqli_query($db, $getUser);
-                    $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
+                    $result = mysqli_fetch_assoc($query);
+                    $_SESSION['username'] = $result['fullName'];
 
-                    return $result;
-
-            
-
+                    if($result['email'] == $email AND $result['pass'] ==  $password){
+                        header("Location: dashboard.php" );
+                    }
+                    
+         
                     
 
                      
