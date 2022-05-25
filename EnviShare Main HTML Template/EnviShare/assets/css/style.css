@@ -3147,7 +3147,7 @@ div#scrollbar::-webkit-scrollbar-thumb {
     justify-content: space-around; }
     @media (min-width: 992px) {
       .header-section .header-area .logo {
-        width: 230px; }
+        width: 160px; }
         .header-section .header-area .logo a {
           display: block; }
           .header-section .header-area .logo a img {
@@ -4393,10 +4393,11 @@ div#scrollbar::-webkit-scrollbar-thumb {
       padding: 0; } }
 
       .support-section .section-wrapper .post-item .post-inner h3 {
-        font-size: 48px;
+        font-size: 35px;
         margin-bottom: 20px;
         color: #fff; }
       .support-section .section-wrapper .post-item .post-inner h4 {
+        
         color: #fff; }
       .support-section .section-wrapper .post-item .post-inner p {
         color: #fff; }
